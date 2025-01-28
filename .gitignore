@@ -1,0 +1,7 @@
+saved
+scripts
+*.sh
+removed
+figures
+jobs
+__pycache__
