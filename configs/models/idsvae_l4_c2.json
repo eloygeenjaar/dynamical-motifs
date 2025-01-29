@@ -1,0 +1,10 @@
+{
+    "name": "IDSVAE_L4_C2",
+    "arch": {
+        "type": "IDSVAE",
+        "args": {
+            "local_size": 4,
+            "context_size": 2
+        }
+    }
+}

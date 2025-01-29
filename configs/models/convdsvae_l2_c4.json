@@ -1,0 +1,10 @@
+{
+    "name": "ConvDSVAE_L2_C4",
+    "arch": {
+        "type": "ConvDSVAE",
+        "args": {
+            "local_size": 2,
+            "context_size": 4
+        }
+    }
+}

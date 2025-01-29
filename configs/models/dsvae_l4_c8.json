@@ -1,0 +1,10 @@
+{
+    "name": "DSVAE_L4_C8",
+    "arch": {
+        "type": "DSVAE",
+        "args": {
+            "local_size": 4,
+            "context_size": 8
+        }
+    }
+}

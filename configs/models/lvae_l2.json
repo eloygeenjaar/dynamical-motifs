@@ -1,0 +1,10 @@
+{
+    "name": "LVAE_L2_C0",
+    "arch": {
+        "type": "LVAE",
+        "args": {
+            "local_size": 2,
+            "context_size": 0
+        }
+    }
+}

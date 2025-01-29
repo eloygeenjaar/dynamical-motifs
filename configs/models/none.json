@@ -1,0 +1,10 @@
+{
+    "name": "",
+    "arch": {
+        "type": "",
+        "args": {
+            "local_size": "",
+            "context_size": ""
+        }
+    }
+}

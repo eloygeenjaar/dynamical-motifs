@@ -1,0 +1,12 @@
+{
+    "data": {
+        "type": "fBIRNICANoiseHigh",
+        "args":{
+            "window_size": 32,
+            "window_step": 4,
+            "fold": 0,
+            "batch_size": 128,
+            "num_workers": 5
+        }
+    }
+}

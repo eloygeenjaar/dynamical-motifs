@@ -1,0 +1,28 @@
+{
+    "run_type": "",
+    "hyperparameter_range": {
+        "num_layers": [""],
+        "spatial_hidden_size": [""],
+        "temporal_hidden_size": [""],
+        "dropout": [""],
+        "seed": [""]
+    },
+    "trainer": {
+        "epochs": "",
+
+        "save_dir": "",
+        "verbosity": "",
+        "lambda_step": ""
+
+    },
+    "optimizer": {
+        "type": "",
+        "args":{
+            "lr": "",
+            "weight_decay": "",
+            "amsgrad": ""
+        }
+    },
+    "loss": "",
+    "metrics": []
+}

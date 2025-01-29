@@ -5,3 +5,5 @@ removed
 figures
 jobs
 __pycache__
+results
+**/__pycache__

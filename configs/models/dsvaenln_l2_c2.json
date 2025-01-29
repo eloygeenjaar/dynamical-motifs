@@ -1,0 +1,10 @@
+{
+    "name": "DSVAENLN_L2_C2",
+    "arch": {
+        "type": "DSVAENLN",
+        "args": {
+            "local_size": 2,
+            "context_size": 2
+        }
+    }
+}

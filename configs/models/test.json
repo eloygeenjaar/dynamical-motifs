@@ -1,0 +1,10 @@
+{
+    "name": "Test",
+    "arch": {
+        "type": "DSVAE",
+        "args": {
+            "local_size": 2,
+            "context_size": 2
+        }
+    }
+}

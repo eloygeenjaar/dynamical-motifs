@@ -1,0 +1,30 @@
+{
+    "run_type": "IDSVAE",
+    "hyperparameter_range": {
+        "num_layers": [0, 1, 2, 3],
+        "spatial_hidden_size": [128, 256],
+        "temporal_hidden_size": [256, 512],
+        "dropout": [0.05, 0.1],
+        "seed": [42, 1337, 1212, 9999]
+    },
+    "trainer": {
+        "epochs": 50,
+
+        "save_dir": "saved/idsvae/",
+        "verbosity": 2,
+        "lambda_step": 1
+
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args":{
+            "lr": 0.002,
+            "weight_decay": 1E-5,
+            "amsgrad": false
+        }
+    },
+    "loss": "elbo",
+    "metrics": [
+        "nll", "kl_local", "kl_context", "mse", "linear_sep"
+    ]
+}

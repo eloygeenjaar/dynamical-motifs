@@ -1,0 +1,10 @@
+{
+    "name": "ConvIDSVAE_L2_C8",
+    "arch": {
+        "type": "ConvIDSVAE",
+        "args": {
+            "local_size": 2,
+            "context_size": 8
+        }
+    }
+}
