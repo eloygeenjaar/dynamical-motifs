@@ -74,37 +74,6 @@ class DSVAE(BaseModel):
         x_hat = self.revin(x_hat, 'denorm')
         return x_hat
 
-class DSVAENLN(BaseModel):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.temporal_encoder = TemporalEncoder(
-            self.input_size, self.local_size, self.context_size,
-            num_layers=self.num_layers,
-            temporal_hidden_size=self.temporal_hidden_size,
-            spatial_hidden_size=self.spatial_hidden_size,
-            dropout_val=self.dropout)
-
-    def forward(self, x):
-        #x_norm = x.transpose(2, 1) # (batch_size, time_length, input_size)
-        x_norm = self.revin(x, 'norm') # (batch_size, time_length, input_size)
-        x_norm = x_norm.transpose(1, 0)
-        context_dist, local_dist, prior_dist, z = self.temporal_encoder(x_norm)
-        x_hat = self.spatial_decoder(z)
-        x_hat = x_hat.transpose(1, 0)
-        x_hat = self.revin(x_hat, 'denorm')
-        return {
-            'context_dist': context_dist,
-            'local_dist': local_dist,
-            'prior_dist': prior_dist,
-            'x_hat': x_hat,
-            'x_orig': x
-        }
-
-    def embed_context(self, x):
-        x_norm = self.revin(x, 'norm')
-        x_norm = x_norm.transpose(1, 0)
-        return self.temporal_encoder.get_context(x_norm)[0]
-
 class ConvDSVAE(DSVAE):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
